@@ -1,6 +1,10 @@
 .container {
   display: flex;
   flex-direction: row;
+<<<<<<< HEAD
+=======
+  justify-content: space-around;
+>>>>>>> b3ebcf85ceb277d10c5a4dc7c5aa9658cfe46d0f
   margin-left: 20%;
   margin-top: 3%;
 }
