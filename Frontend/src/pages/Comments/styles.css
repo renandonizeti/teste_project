@@ -1,0 +1,26 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20%;
+  margin-top: 3%;
+}
+
+.line-center{
+  margin-left: 10%;
+
+}
+.comment-list {
+  margin-left: 10%;
+
+}
+.comment-text{
+  margin-top: 5%;
+  margin-bottom: 1%;
+
+}
+
+.btn-to-hear{
+  width: 50px;
+  height: 25px;
+  background: rgb(230, 230, 230);
+}
