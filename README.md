@@ -6,9 +6,7 @@
 <h1> Instruções Projeto Teste</h1>
 
 <h2>1 - Como rodar</h2>
-1.1 - Com MySQL criar um banco de dados e alterar as informações de acesso ao banco de dados em "/config/config.js" no backend.
-Não é necessário criar as tabelas, pois o sequelize ja irá crialas automáticamente.
->>>>>>> b3ebcf85ceb277d10c5a4dc7c5aa9658cfe46d0f
+1.1 - Para iniciar o banco de dados, utilizar o dotenv, tem o modelo no arquivo "example.env" que tem os parametros necessários.
 
 1.2 - Na pasta backend: npm install para instalar as dependências e node index.js para inicializar o servidor.
 
