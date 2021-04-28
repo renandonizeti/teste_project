@@ -2,7 +2,7 @@
 <h1> Instruções Projeto Teste</h1>
 
 <h2>1 - Como rodar</h2>
-1.1 - Iniciar a banco de dados com o dotenv, existe um arquivo example.env com os dados necessários...
+1.1 - Iniciar a banco de dados com o dotenv, existe um arquivo example.env com os dados necessários.
 
 1.2 - Na pasta backend: npm install para instalar as dependências e node index.js para inicializar o servidor.
 
@@ -55,5 +55,3 @@
     <b>Uma pagina web para cadastro de comentários, que é um TextArea com um botão cadastrar onde armazena o comentário no banco de dados.
 
     Exibe os comentários feitos a direita, onde possui o botão "Ouvir", que chama a API Watson IBM Text To Speech e converte o comentário em áudio.
-
-    Todos as strings base64 dos áudios já sintetizados são armazenados no sessionStorage, para que não precise ser feita outra requisição e sintetização ao escutar um áudio já sintetizado, e duram até o navegador ser fechado.</b>
