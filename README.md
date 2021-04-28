@@ -2,7 +2,7 @@
 <h1> Instruções Projeto Teste</h1>
 
 <h2>1 - Como rodar</h2>
-1.1 - Iniciar a banco de dados com o dotenv, existe um arquivo example.env com os dados necessários.
+1.1 - Iniciar a banco de dados com o dotenv, existe um arquivo example.env com os dados necessários...
 
 1.2 - Na pasta backend: npm install para instalar as dependências e node index.js para inicializar o servidor.
 
