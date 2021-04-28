@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-
 <h1> Instruções Projeto Teste</h1>
 
 <h2>1 - Como rodar</h2>
 1.1 - Iniciar a banco de dados com o dotenv, existe um arquivo example.env com os dados necessários.
-=======
+
 <h1> Instruções Projeto Teste</h1>
 
 <h2>1 - Como rodar</h2>
@@ -18,7 +16,6 @@ Não é necessário criar as tabelas, pois o sequelize ja irá crialas automáti
 
 <h2>2 - Descrição e tecnologias utilizadas</h2>
 2.1 - Banco de dados:
-<<<<<<< HEAD
 
     Para o banco de dados, utilizei o MySQL, é nele que irá salvar nossos dados e fazer com que eu possa inserir novos dados e lista-los.
     
@@ -88,4 +85,4 @@ A aplicação conta com:
 <b>Uma pagina web para cadastro de comentários, que é um TextArea com um botão cadastrar onde armazena o comentário no banco de dados.
 Exibe os comentários feitos a direita, onde possui o botão "Ouvir", que chama a API Watson IBM Text To Speech e converte o comentário em áudio.
 Todos as strings base64 dos áudios já sintetizados são armazenados no sessionStorage, para que não precise ser feita outra requisição e sintetização ao escutar um áudio já sintetizado, e duram até o navegador ser fechado.</b>
->>>>>>> b3ebcf85ceb277d10c5a4dc7c5aa9658cfe46d0f
+
