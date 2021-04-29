@@ -19,7 +19,8 @@ export const Comments = () => {
     setComments(state => state.concat(value));
   }, []);
 
-  const handleListenAudio = useCallback(async (userComment) => {
+  const handleListenAudio = useCallback(async (userComment, commentId) => {
+
       try {
         const response = await api.post(`synthesize`, {
           text: userComment,
@@ -32,6 +33,7 @@ export const Comments = () => {
       } catch(error) {
         alert('Não foi possivel sintetizar seu comentário.');
       }
+
 
     const audio = document.querySelector('audio');
 
