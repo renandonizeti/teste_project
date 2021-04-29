@@ -51,9 +51,13 @@
         Axios - a utilização do axios é baseado em promessas, o que oferece a capacidade de aproveitar o async e await do JavaScript para um código assíncrono mais legível.
         Também é possível interceptar e cancelar solicitações, e existe uma proteção integrada do lado do cliente contra a falsificação de solicitações entre sites.
 
-    <h3> Funcionalidade da Aplicação </h3>
+<h3> Funcionalidade da Aplicação </h3>
         
-    <b>Uma pagina web para cadastro de comentários, que é um TextArea com um botão cadastrar onde armazena o comentário no banco de dados.
+<b>Uma pagina web para cadastro de comentários, que é um TextArea com um botão cadastrar onde armazena o comentário no banco de dados.
 
-    Exibe os comentários feitos a direita, onde possui o botão "Ouvir", que chama a API Watson IBM Text To Speech e converte o comentário em áudio.</b>
+Exibe os comentários feitos a direita, onde possui o botão "Ouvir", que chama a API Watson IBM Text To Speech e converte o comentário em áudio.
+
+Todos as strings base64 dos áudios já sintetizados são armazenados no sessionStorage, para que não precise ser feita outra requisição e sintetização ao escutar um áudio já sintetizado, e duram até o navegador ser fechado.
+
+</b>
 

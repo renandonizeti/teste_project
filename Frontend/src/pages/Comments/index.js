@@ -1,5 +1,9 @@
 import React, { useCallback, useEffect, useState } from 'react';
 
+import ReactAudioPlayer from 'react-audio-player';
+
+import { Box } from '@material-ui/core';
+
 import { api } from '../../services/api';
 
 import { NewComment } from '../../components/NewComment';
@@ -21,23 +25,35 @@ export const Comments = () => {
 
   const handleListenAudio = useCallback(async (userComment, commentId) => {
 
+    const sessionStorageObject = {
+      commentId: commentId,
+    };
+
+    const storagedBase64Audio = sessionStorage.getItem(JSON.stringify(sessionStorageObject));
+
+    if (storagedBase64Audio) {
+      const array = Buffer.from(storagedBase64Audio, 'base64');
+      const blob = new Blob([array], { type: 'audio/wav' })
+      const objecturl = URL.createObjectURL(blob);
+
+      setAudioSource(objecturl);
+
+    } else {
       try {
         const response = await api.post(`synthesize`, {
           text: userComment,
         });
         const array = Buffer.from(response.data.base64Audio, 'base64');
-        const blob = new Blob([array], {type: 'audio/wav'})
+        const blob = new Blob([array], { type: 'audio/wav' })
         const objecturl = URL.createObjectURL(blob);
 
+        sessionStorage.setItem(JSON.stringify(sessionStorageObject), response.data.base64Audio);
+
         setAudioSource(objecturl);
-      } catch(error) {
-        alert('Não foi possivel sintetizar seu comentário.');
+      } catch (error) {
+        alert('Não foi possivel sintetizar seu comentario.');
       }
-
-
-    const audio = document.querySelector('audio');
-
-    audio.play();
+    }
   }, []);
 
   useEffect(() => {
@@ -55,6 +71,15 @@ export const Comments = () => {
           onHandleSetComments={(value) => handleSetComments(value)}
         />
       </div>
+
+      <Box
+        classname="box"
+        autoPlay={true}
+        component={ReactAudioPlayer}
+        controls={true}
+        src={audioSource}
+      />
+
       <hr className="line-center"></hr>
 
       <div className="comment-list">
